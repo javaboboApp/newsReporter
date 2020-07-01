@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/newReporterListFragment">
+
+    <fragment
+        android:id="@+id/newReporterListFragment"
+        android:name="com.example.newsreporter.ui.newsreporter.NewReporterListFragment"
+        android:label="@string/list_reporter_title"
+        tools:layout="@layout/fragment_new_reporter_list" >
+        <action
+            android:id="@+id/action_newReporterListFragment_to_addNewsReporterFragment"
+            app:destination="@id/addNewsReporterFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+            />
+        <action
+            android:id="@+id/action_newReporterListFragment_to_newsReporterInfoFragment"
+            app:destination="@id/newsReporterInfoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+            <argument
+                android:name="newReporter"
+                app:argType="com.example.newsreporter.models.NewReporter" />
+        </action>
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addNewsReporterFragment"
+        android:name="com.example.newsreporter.ui.newsreporter.AddNewsReporterFragment"
+        android:label="@string/add_new"
+        tools:layout="@layout/fragment_add_news_reporter" />
+    <fragment
+        android:id="@+id/newsReporterInfoFragment"
+        android:name="com.example.newsreporter.ui.newsreporter.NewsReporterInfoFragment"
+        android:label="@string/update_new_title"
+        tools:layout="@layout/fragment_news_reporter_info" >
+        <argument
+            android:name="newReporter"
+            app:argType="com.example.newsreporter.models.NewReporter" />
+    </fragment>
+</navigation>

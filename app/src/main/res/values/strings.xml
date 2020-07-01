@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NewsReporter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_error_retriving">Something was wrong :(</string>
+    <string name="no_data">No data</string>
+    <string name="title">Title</string>
+    <string name="type_a_nice_history">Type a nice history...</string>
+    <string name="add_new">Add New</string>
+    <string name="not_empty_field_error">Fields can not be empty</string>
+    <string name="error_inserting_msg">Error inserting</string>
+    <string name="list_reporter_title">News</string>
+    <string name="error_updating_msg">Error updating</string>
+    <string name="update_new_title">Update New</string>
+</resources>
