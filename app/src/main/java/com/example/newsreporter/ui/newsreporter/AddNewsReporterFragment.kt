@@ -31,6 +31,8 @@ class AddNewsReporterFragment : BaseFragment() {
 
 
     private fun insert() {
+        comunicatorInterface.hideKeyBoard()
+        focusable_view.requestFocus()
         val newReporter = validate()
         if (newReporter == null) {
             showValidationError()
@@ -53,14 +55,18 @@ class AddNewsReporterFragment : BaseFragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+
     private fun addAndObserver(validate: NewReporter) {
+
         addNewsReporterViewModel.insertNewsReportedList(validate)
             .observe(viewLifecycleOwner, Observer { result ->
+
                 when (result.status) {
                     SUCCESS -> {
                         findNavController().popBackStack()
                         comunicatorInterface.hideProgressBar()
-                        comunicatorInterface.hideKeyBoard()
 
                     }
                     ERROR

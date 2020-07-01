@@ -35,7 +35,7 @@ class NewReporterListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.requestFocus()
+
         initAdapter()
         initRecyclerView()
         subscribeObserver()
@@ -52,8 +52,6 @@ class NewReporterListFragment : BaseFragment() {
 
     private fun initAdapter() {
         mAdapter = NewReporterItemAdapter(object : NewReporterItemAdapter.Listener {
-
-
             //on remove item called
             override fun remove(newReporter: NewReporter) {
                 newsReporterListViewModel.remove(newReporter).observe(viewLifecycleOwner, Observer {

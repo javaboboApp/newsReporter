@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.fragment_add_news_reporter.*
 import kotlinx.android.synthetic.main.fragment_news_reporter_info.*
 import kotlinx.android.synthetic.main.fragment_news_reporter_info.history_editText
 import kotlinx.android.synthetic.main.fragment_news_reporter_info.title_edittext
+import kotlinx.android.synthetic.main.fragment_news_reporter_info.focusable_view
+
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
@@ -60,15 +62,21 @@ class NewsReporterInfoFragment : BaseFragment() {
         return super.onOptionsItemSelected(item)
     }
 
+
     fun update() {
+        comunicatorInterface.hideKeyBoard()
+        focusable_view.requestFocus()
+
         val newReporter = validate()
         if (newReporter != null) {
+
+
             updateNewsReporterViewModel.updateNewsReporter(newReporter).observe(viewLifecycleOwner, Observer { result->
+
                 when (result.status) {
                     Resource.Status.SUCCESS -> {
                         findNavController().popBackStack()
                         comunicatorInterface.hideProgressBar()
-                        comunicatorInterface.hideKeyBoard()
 
                     }
                     Resource.Status.ERROR
