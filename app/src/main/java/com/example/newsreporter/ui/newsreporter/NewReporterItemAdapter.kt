@@ -1,5 +1,6 @@
 package com.example.newsreporter.ui.newsreporter
 
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,8 +45,8 @@ class NewReporterItemAdapter(val listener: Listener) :
 
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(newReporter: NewReporter, listener: Listener) = with(itemView) {
-            title_textview.text = newReporter.title
-            history_textview.text = newReporter.history
+            title_textview.text =newReporter.title
+            history_textview.text = Html.fromHtml("&#750; ${ newReporter.history} &#750;")
             create_date_textview.text = getDate(newReporter.timestamp)
             setOnClickListener {
                 listener.onClickItem(newReporter)

@@ -3,53 +3,70 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
 
->
+    >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dime16dp"
-        android:layout_marginRight="@dimen/dime16dp"
         android:layout_marginTop="@dimen/dime8dp"
-
-        app:cardCornerRadius="@dimen/dime16dp"
+        android:layout_marginRight="@dimen/dime16dp"
+        android:elevation="4dp"
         app:cardBackgroundColor="@android:color/holo_orange_light"
+        app:cardCornerRadius="@dimen/dime16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/title_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dime16dp"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/dime24sp"
-            android:textStyle="bold"
-            tools:text="Title" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/history_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="@dimen/dime50dp"
-            android:layout_marginLeft="@dimen/dime16dp"
-            tools:text="Hello this is my history" />
+            <TextView
+                android:id="@+id/title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="@dimen/dime16dp"
+                android:layout_marginBottom="@dimen/dime16dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dime24sp"
+                android:textStyle="bold"
+                tools:text="Title" />
 
-        <TextView
-            android:id="@+id/create_date_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="@dimen/dime16dp"
-            tools:text="10 of July" />
+            <TextView
+                android:id="@+id/history_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_textview"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/dime16dp"
+                android:background="#ABFFCE5A"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dime24sp"
+                tools:text=" &#750; Hello this is my history hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#750;" />
 
+            <TextView
+                android:id="@+id/create_date_textview"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/history_textview"
+                android:layout_margin="@dimen/dime16dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dime16dp"
+                android:textStyle="italic"
+                tools:text="10 of July" />
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
