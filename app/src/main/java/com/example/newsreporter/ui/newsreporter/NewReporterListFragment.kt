@@ -35,6 +35,7 @@ class NewReporterListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        view.requestFocus()
         initAdapter()
         initRecyclerView()
         subscribeObserver()

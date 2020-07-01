@@ -41,5 +41,15 @@
             android:layout_marginLeft="@dimen/dime16dp"
             tools:text="Hello this is my history" />
 
+        <TextView
+            android:id="@+id/create_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="@dimen/dime16dp"
+            tools:text="10 of July" />
+
+
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

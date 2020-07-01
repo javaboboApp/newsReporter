@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsreporter.R
 import com.example.newsreporter.models.NewReporter
+import com.example.newsreporter.utils.DateUtils.getDate
 import kotlinx.android.synthetic.main.item_adapter_new_reporter.view.*
 
 class NewReporterItemAdapter(val listener: Listener) :
@@ -45,6 +46,7 @@ class NewReporterItemAdapter(val listener: Listener) :
         fun bind(newReporter: NewReporter, listener: Listener) = with(itemView) {
             title_textview.text = newReporter.title
             history_textview.text = newReporter.history
+            create_date_textview.text = getDate(newReporter.timestamp)
             setOnClickListener {
                 listener.onClickItem(newReporter)
             }
