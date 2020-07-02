@@ -60,8 +60,6 @@ class NewsReporterRepository(val database: AppDatabase) : INewsRepository {
 
         AppExecutors.instance?.diskIO()?.execute {
             try {
-
-
                 val valueReturned = database.newsDao.removeNewsReport(newReporter)
                 if (valueReturned != -1) {
                     result.postValue(Resource.success(Event(newReporter)))
@@ -82,8 +80,6 @@ class NewsReporterRepository(val database: AppDatabase) : INewsRepository {
         AppExecutors.instance?.diskIO()?.execute {
             try {
                 val valueReturned = database.newsDao.updateNewsReport(newReporter)
-
-
                 if (valueReturned != -1) {
                     result.postValue(Resource.success(Event(newReporter)))
                     return@execute

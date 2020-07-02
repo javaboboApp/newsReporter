@@ -6,7 +6,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_orange_dark"
     tools:context=".ui.newsreporter.AddNewsReporterFragment">
-
+    <View
+        android:id="@+id/focusable_view"
+        android:layout_width="0.5dp"
+        android:layout_height="0.5dp"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></View>
     <EditText
         android:id="@+id/title_edittext"
         android:layout_width="0dp"

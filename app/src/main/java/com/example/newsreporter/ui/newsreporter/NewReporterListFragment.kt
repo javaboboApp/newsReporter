@@ -21,6 +21,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class NewReporterListFragment : BaseFragment() {
 
 
+    private val TAG: String = "NewReporterListFragment"
     private lateinit var mAdapter: NewReporterItemAdapter
     private val newsReporterListViewModel: NewsReporterListViewModel by viewModel()
 
@@ -46,7 +47,13 @@ class NewReporterListFragment : BaseFragment() {
 
     private fun initListeners() {
         add_news_reporters.setOnClickListener {
-            findNavController().navigate(R.id.action_newReporterListFragment_to_addNewsReporterFragment)
+            try {
+                findNavController().navigate(R.id.action_newReporterListFragment_to_addNewsReporterFragment)
+
+            } catch (exeption: IllegalArgumentException) {
+                Log.i(TAG, "illegal argument exeption")
+            }
+
         }
     }
 
@@ -72,8 +79,16 @@ class NewReporterListFragment : BaseFragment() {
             }
 
             override fun onClickItem(newReporter: NewReporter) {
-                val action = NewReporterListFragmentDirections.actionNewReporterListFragmentToNewsReporterInfoFragment(newReporter)
-                findNavController().navigate(action)
+                val action =
+                    NewReporterListFragmentDirections.actionNewReporterListFragmentToNewsReporterInfoFragment(
+                        newReporter
+                    )
+                try {
+                    findNavController().navigate(action)
+                } catch (exeption: IllegalArgumentException) {
+                    Log.i(TAG, "illegal argument exeption")
+                }
+
             }
 
         })

@@ -16,6 +16,8 @@
         android:layout_marginTop="@dimen/dime8dp"
         android:layout_marginRight="@dimen/dime16dp"
         android:elevation="4dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@android:color/holo_orange_light"
         app:cardCornerRadius="@dimen/dime16dp"
         app:layout_constraintBottom_toBottomOf="parent"
