@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_orange_dark"
-    tools:context=".ui.newsreporter.AddNewsReporterFragment">
+    tools:context=".ui.notes.AddNewsReporterFragment">
     <View
         android:id="@+id/focusable_view"
         android:layout_width="0.5dp"

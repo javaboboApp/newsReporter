@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notas</string>
+    <string name="msg_error_retriving">Algo fue mal :(</string>
+    <string name="no_data">Sin datos</string>
+    <string name="type_a_nice_history">Escrite algo...</string>
+    <string name="add_new">Crear nota</string>
+    <string name="not_empty_field_error">Los campos no pueden estar vacias</string>
+    <string name="error_inserting_msg">Error al insertar</string>
+    <string name="list_reporter_title">Notas</string>
+    <string name="error_updating_msg">Error actualizando</string>
+    <string name="update_new_title">Actualizar nota</string>
+    <string name="title">Titulo</string>
+</resources>

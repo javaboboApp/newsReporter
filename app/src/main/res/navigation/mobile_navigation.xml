@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/newReporterListFragment"
-        android:name="com.example.newsreporter.ui.newsreporter.NewReporterListFragment"
+        android:name="com.javabobo.notes.ui.notes.NewReporterListFragment"
         android:label="@string/list_reporter_title"
         tools:layout="@layout/fragment_new_reporter_list" >
         <action
@@ -28,7 +28,7 @@
             app:exitAnim="@anim/slide_out_left">
             <argument
                 android:name="newReporter"
-                app:argType="com.example.newsreporter.models.NewReporter" />
+                app:argType="com.javabobo.notes.models.NewReporter" />
         </action>
 
 
@@ -36,16 +36,16 @@
     </fragment>
     <fragment
         android:id="@+id/addNewsReporterFragment"
-        android:name="com.example.newsreporter.ui.newsreporter.AddNewsReporterFragment"
+        android:name="com.javabobo.notes.ui.notes.AddNewsReporterFragment"
         android:label="@string/add_new"
         tools:layout="@layout/fragment_add_news_reporter" />
     <fragment
         android:id="@+id/newsReporterInfoFragment"
-        android:name="com.example.newsreporter.ui.newsreporter.NewsReporterInfoFragment"
+        android:name="com.javabobo.notes.ui.notes.NewsReporterInfoFragment"
         android:label="@string/update_new_title"
         tools:layout="@layout/fragment_news_reporter_info" >
         <argument
             android:name="newReporter"
-            app:argType="com.example.newsreporter.models.NewReporter" />
+            app:argType="com.javabobo.notes.models.NewReporter" />
     </fragment>
 </navigation>
